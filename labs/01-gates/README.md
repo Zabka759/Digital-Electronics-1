@@ -51,5 +51,5 @@
     | 1 | 0 | 1 | 1 | 1 | 1 |
     | 1 | 1 | 0 | 1 | 1 | 1 |
     | 1 | 1 | 1 | 0 | 0 | 0 |
-![and_gates](Digital-Electronics-1/labs/01-gates/funkce_f_AND_OR.png)
+![and_gates](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/01-gates/funkce_f_AND_OR.png)
 
