@@ -1,6 +1,7 @@
 ## Výsledky simulace
 1. Výsledky na hradlech
-| **A** | **NOT** |
+
+    | **A** | **NOT** | 
     | :-: | :-: |
     | 0 | 1 |
     | 1 | 0 |
