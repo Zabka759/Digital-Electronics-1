@@ -26,7 +26,7 @@
     | 0 | 1 | 1 | 0 |
     | 1 | 0 | 1 | 0 |
     | 1 | 1 | 0 | 1 |
-
+![Hradla](/01-gates/Zapojeni_z_Gitu.png)
 2. DeMorganovy zákony
 
    ![equation](https://latex.codecogs.com/gif.latex?f%20%3D%20a%5Ccdot%20%5Coverline%7Bb%7D%20&plus;%20%5Coverline%7Bb%7D%5Ccdot%20%5Coverline%7Bc%7D)
