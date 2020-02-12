@@ -50,3 +50,5 @@
     | 1 | 0 | 1 | 1 | 1 | 1 |
     | 1 | 1 | 0 | 1 | 1 | 1 |
     | 1 | 1 | 1 | 0 | 0 | 0 |
+
+![and_gates](/home/lab661/Documents/xzabka03/Digital-Electronics-1/labs/01-gates/funkce_f_AND_OR.png)
