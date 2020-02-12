@@ -1,6 +1,7 @@
 ## Výsledky simulace
 1. Výsledky na hradlech
-| **A** | **NOT** |
+
+    | **A** | **NOT** | 
     | :-: | :-: |
     | 0 | 1 |
     | 1 | 0 |
@@ -25,6 +26,8 @@
     | 0 | 1 | 1 | 0 |
     | 1 | 0 | 1 | 0 |
     | 1 | 1 | 0 | 1 |
+    
+    ![Hradla](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/01-gates/Zapojeni_z_Gitu.png)
 
 2. DeMorganovy zákony
 
@@ -51,4 +54,5 @@
     | 1 | 1 | 0 | 1 | 1 | 1 |
     | 1 | 1 | 1 | 0 | 0 | 0 |
 
-![and_gates](/home/lab661/Documents/xzabka03/Digital-Electronics-1/labs/01-gates/funkce_f_AND_OR.png)
+![and_gates](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/01-gates/funkce_f_AND_OR.png)
+
