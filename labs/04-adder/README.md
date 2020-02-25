@@ -25,6 +25,7 @@
     | 1 | 0 | 1 | 1 | 0 |
     | 1 | 1 | 0 | 1 | 0 |
     | 1 | 1 | 1 | 1 | 1 |
+    
 ![Full_adder](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/04-adder/fulladder.png)
 3. Find the relationship between half adder and full adder logic diagrams.
 The relationship is that the full adder is composed from two half adders as it is shown in picture below:
