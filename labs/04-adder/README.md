@@ -32,6 +32,5 @@ The relationship is that the full adder is composed from two half adders as it i
 ![binaryadder](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/04-adder/tempsnip.png)
 
 4. See schematic of the [CPLD expansion board](../../Docs/cpld_expansion.pdf) and find out the connection of LEDs, push buttons, and slide switches.
-
-![LEDs](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/04-adder/LEDs_SW.png)
 Every button is connected to a switch with same number
+![LEDs](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/04-adder/LEDs_SW.png)
