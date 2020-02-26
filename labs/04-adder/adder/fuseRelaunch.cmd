@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/lab661/Documents/xzabka03/Digital-Electronics-1/labs/04-adder/adder/vhd_tb00_isim_beh.exe" -prj "/home/lab661/Documents/xzabka03/Digital-Electronics-1/labs/04-adder/adder/vhd_tb00_beh.prj" "work.vhd_tb00" 
