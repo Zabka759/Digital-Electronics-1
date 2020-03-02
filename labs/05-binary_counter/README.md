@@ -17,7 +17,7 @@
     
 2. See how to create a [synchronous operation](https://github.com/tomas-fryza/Digital-electronics-1/wiki/VHDL-cheat-sheet#processes) in the VHDL.
 
-    ```vhdl
+```vhdl
 p_label : process (clk_i)
 begin
     if rising_edge(clk_i) then      -- Rising clock edge
