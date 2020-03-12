@@ -27,3 +27,5 @@ The connection of 7-segment display, and complete the signal timing to display `
   },
 }
 ```
+![Timing](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/06-display_driver/timing.png)
+
