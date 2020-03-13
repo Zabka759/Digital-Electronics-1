@@ -71,7 +71,7 @@ HEX27SEG: entity work.hex_to_7seg
     begin
         if rising_edge(clk_i) then  -- Rising clock edge
             if srst_n_i = '0' then  -- Synchronous reset (active low)
-                s_cnt <= "00";      -- When reset is low, reset counter
+               s_cnt <= (others => '0');     -- When reset is low, clear all bits
             elsif s_en = '1' then   -- else increment counter
                 s_cnt <= s_cnt+1;
             end if;
@@ -88,19 +88,19 @@ HEX27SEG: entity work.hex_to_7seg
         when "00" =>
 	        dig_o<="1110";
                 s_hex<=data0_i;
-		dp_o<=dp_i(3);
+		dp_o<=dp_i(0);
         when "01" =>
 		dig_o<="1101";
                 s_hex<=data1_i;
-		dp_o<=dp_i(2);
+		dp_o<=dp_i(1);
         when "10" =>
 		dig_o<="1011";
                 s_hex<=data2_i;
-		dp_o<=dp_i(1);
+		dp_o<=dp_i(2);
         when others =>
 		dig_o<="0111";
                 s_hex<=data3_i;
-		dp_o<=dp_i(0);
+		dp_o<=dp_i(3);
         end case;
     end process p_mux;
 
