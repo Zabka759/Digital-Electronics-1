@@ -48,9 +48,9 @@ begin
   CLOCKEN: entity work.clock_enable
 	    GENERIC MAP ( g_NPERIOD => x"0028" ) 
 	    PORT MAP (
-			  clk_i => clk_i,
+			clk_i => clk_i,
 		  	srst_n_i => srst_n_i,
-			  clock_enable_o => s_en);
+			clock_enable_o => s_en);
 
     --------------------------------------------------------------------
     -- Sub-block of hex_to_7seg entity
@@ -86,21 +86,21 @@ HEX27SEG: entity work.hex_to_7seg
     begin
        case s_cnt is
         when "00" =>
+	        dig_o<="1110";
                 s_hex<=data0_i;
-                dig_o<="1110";
-			          dp_o<=dp_i(3);
+		dp_o<=dp_i(3);
         when "01" =>
+		dig_o<="1101";
                 s_hex<=data1_i;
-				        dig_o<="1101";
-				        dp_o<=dp_i(2);
+		dp_o<=dp_i(2);
         when "10" =>
+		dig_o<="1011";
                 s_hex<=data2_i;
-				        dig_o<="1011";
-				        dp_o<=dp_i(1);
+		dp_o<=dp_i(1);
         when others =>
+		dig_o<="0111";
                 s_hex<=data3_i;
-				        dig_o<="0111";
-				        dp_o<=dp_i(0);
+		dp_o<=dp_i(0);
         end case;
     end process p_mux;
 
