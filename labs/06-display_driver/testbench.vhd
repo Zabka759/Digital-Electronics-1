@@ -1,36 +1,6 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   21:39:48 03/13/2020
--- Design Name:   
--- Module Name:   C:/Documents/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_tb.vhd
--- Project Name:  display_driver
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: driver_7seg
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
  
 ENTITY testbench IS
 END testbench;
@@ -102,7 +72,7 @@ BEGIN
    stim_proc: process
    begin		
       wait for 100 ns;	
-            srst_n_i<='1';
+            		srst_n_i<='1';
 	        	data0_i<="0100";
 		        data1_i<="0001";
 		        data2_i<="0011";
