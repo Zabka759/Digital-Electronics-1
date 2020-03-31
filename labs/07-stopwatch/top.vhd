@@ -32,12 +32,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity top is
 port (
     clk_i   	: in  std_logic;			-- Clock
-    BTN0  		: in std_logic;      	-- Synchronous reset srst_n_i
-	 BTN1  		: in std_logic;       	-- Stopwatch enable : '1' when not pushed so push to disable stopwatch counting
+    BTN0  	: in std_logic;      	-- Synchronous reset srst_n_i
+    BTN1  	: in std_logic;       	-- Stopwatch enable : '1' when not pushed so push to disable stopwatch counting
     
-    disp_dp_o  : out std_logic;                       -- Decimal point
-    disp_seg_o : out std_logic_vector(7-1 downto 0);	--	Segments of 7seg disp
-    disp_dig_o : out std_logic_vector(4-1 downto 0)	-- Choice of one of four 7 seg displays
+    disp_dp_o  	: out std_logic;                       	-- Decimal point
+    disp_seg_o 	: out std_logic_vector(7-1 downto 0);	--	Segments of 7seg disp
+    disp_dig_o 	: out std_logic_vector(4-1 downto 0)	-- Choice of one of four 7 seg displays
 );
 end top;
 
@@ -47,10 +47,10 @@ end top;
 
 architecture Behavioral of top is
 	 signal s_ce_100Hz_i  	: std_logic;
-	 signal s_data0  			: std_logic_vector(4-1 downto 0);
-	 signal s_data1  			: std_logic_vector(4-1 downto 0);
-	 signal s_data2  			: std_logic_vector(4-1 downto 0);
-	 signal s_data3  			: std_logic_vector(4-1 downto 0);
+	 signal s_data0  	: std_logic_vector(4-1 downto 0);
+	 signal s_data1  	: std_logic_vector(4-1 downto 0);
+	 signal s_data2  	: std_logic_vector(4-1 downto 0);
+	 signal s_data3  	: std_logic_vector(4-1 downto 0);
 begin
 
 -------------------------------------------------------------------------------
@@ -59,10 +59,10 @@ begin
 
 	STOPWATCH : entity work.stopwatch
 			port map (
-				clk_i => clk_i,
-				srst_n_i => BTN0,				--synchronous reset
-				ce_100Hz_i => s_ce_100Hz_i,
-				cnt_en_i => BTN1,  
+				clk_i 		=> clk_i,
+				srst_n_i 	=> BTN0,				--synchronous reset
+				ce_100Hz_i	=> s_ce_100Hz_i,
+				cnt_en_i 	=> BTN1,  
 				
 				sec_h_o => s_data3,
 				sec_l_o => s_data2,
@@ -82,8 +82,8 @@ begin
 		
 	DRIVER7SEG : entity work.driver_7seg
 	port map(
-				clk_i 	=> clk_i,  
-				srst_n_i => BTN0,
+				clk_i 		=> clk_i,  
+				srst_n_i 	=> BTN0,
 				data0_i 	=> s_data0,   
 				data1_i 	=> s_data1,
 				data2_i 	=> s_data2, 
@@ -91,8 +91,8 @@ begin
 				dp_i 		=> "1011",   
     
 				dp_o 		=> disp_dp_o,                        
-				seg_o 	=> disp_seg_o,   
-				dig_o 	=> disp_dig_o   
+				seg_o 		=> disp_seg_o,   
+				dig_o 		=> disp_dig_o   
 );
 	
 end Behavioral;
