@@ -51,15 +51,15 @@ Na tomto obrázku je vidět funkce debounceru. S určitou samplovací periodou (
 ## Nákres stavového automatu
 
 ## Odkazy na zdrojové soubory
-[TX_FSM.vhd](labs/UART/files/TX_FSM.vhd)
-[top.vhd](labs/UART/files/top.vhd)
-[Debounce.vhd](labs/UART/files/Debounce.vhd)
-[clock_enable.vhd](labs/UART/files/clock_enable.vhd)
-[tb_top00.vhd](labs/UART/files/tb_top00.vhd)
-[tb_debounce1.vhd](labs/UART/files/tb_debounce1.vhd)
+* [TX_FSM.vhd](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/UART/files/TX_FSM.vhd)
+* [top.vhd](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/UART/files/top.vhd)
+* [Debounce.vhd](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/UART/files/Debounce.vhd)
+* [clock_enable.vhd](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/UART/files/clock_enable.vhd)
+* [tb_top00.vhd](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/UART/files/tb_top00.vhd)
+* [tb_debounce1.vhd](https://github.com/Zabka759/Digital-Electronics-1/blob/master/labs/UART/files/tb_debounce1.vhd)
 
 ## Zdroje
 * [*VHDL state machine*](https://www.allaboutcircuits.com/technical-articles/implementing-a-finite-state-machine-in-vhdl/)
 * [*FSM design*](https://www.youtube.com/watch?v=SwilSD9JdiQ&list=PLZv8x7uxq5XY-IQfQFb6mC6OXzz0h8ceF&index=19)
-* Přednášky DE2 (zejména 3. a 7.)
 * [*Buffer filling*](https://stackoverflow.com/questions/33130066/vhdl-multiple-std-logic-vector-to-one-large-std-logic-vector)
+* Přednášky DE2 (zejména 3. a 7.)
