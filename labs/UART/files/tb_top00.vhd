@@ -22,10 +22,10 @@ ARCHITECTURE behavior OF tb_top00 IS
          SW14_CPLD 	: IN  std_logic;
          SW15_CPLD 	: IN  std_logic;
          clk_i 		: IN  std_logic;
-         BTN0 			: IN  std_logic;
-         BTN1 			: IN  std_logic;
-         data_o 		: OUT  std_logic;
-         busy_o 		: OUT  std_logic
+         BTN0 		: IN  std_logic;
+         BTN1 		: IN  std_logic;
+         data_o 	: OUT  std_logic;
+         busy_o 	: OUT  std_logic
         );
     END COMPONENT;
     
@@ -42,7 +42,7 @@ ARCHITECTURE behavior OF tb_top00 IS
    signal SW13_CPLD 	: std_logic := '0';
    signal SW14_CPLD 	: std_logic := '0';
    signal SW15_CPLD 	: std_logic := '0';
-   signal clk_i 		: std_logic := '0';
+   signal clk_i 	: std_logic := '0';
    signal BTN0 		: std_logic := '0';
    signal BTN1 		: std_logic := '0';
 
@@ -88,28 +88,26 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-			SW0_CPLD 	<= '1';
-         SW1_CPLD		<= '0';
-         SW7_CPLD 	<= '0';
-         SW8_CPLD		<= '1';	
-         SW9_CPLD 	<= '0';
-         SW10_CPLD 	<= '1';
-         SW11_CPLD 	<= '0';
-         SW12_CPLD 	<= '0';
-         SW13_CPLD 	<= '0';
-         SW14_CPLD 	<= '1';
-         SW15_CPLD	<= '0';
-         BTN0 <= '1';
-         BTN1 <= '1';
-			wait for 10 ms;
-			
-			for I in 0 to 5 loop
-				BTN1 <= '0';
-				wait for 10 ms;
-				BTN1 <= '1';
-				wait for 20 ms;
-			end loop;
-      wait;
+	SW0_CPLD 	<= '1';
+        SW1_CPLD	<= '0';
+        SW7_CPLD 	<= '0';
+        SW8_CPLD	<= '1';	
+        SW9_CPLD 	<= '0';
+        SW10_CPLD 	<= '1';
+        SW11_CPLD 	<= '0';
+        SW12_CPLD 	<= '0';
+        SW13_CPLD 	<= '0';
+        SW14_CPLD 	<= '1';
+        SW15_CPLD	<= '0';
+        BTN0 		<= '1';
+        BTN1 		<= '1';
+	wait for 10 ms;		
+	for I in 0 to 5 loop
+		BTN1 <= '0';
+		wait for 10 ms;
+		BTN1 <= '1';
+		wait for 20 ms;
+	end loop;
+      	wait;
    end process;
-
 END;
