@@ -2,10 +2,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity TX_FSM is
-    Port ( clk_i 		: in  STD_LOGIC;
+    Port ( clk_i 	: in  STD_LOGIC;
            srst_n_i 	: in  STD_LOGIC;
-			  msg_ce_i 	: in 	STD_LOGIC;
-			  Bd_ce_i 	: in 	STD_LOGIC;
+	   msg_ce_i 	: in  STD_LOGIC;
+	   Bd_ce_i 	: in  STD_LOGIC;
            parity_i 	: in  STD_LOGIC;
            stop_i 	: in  STD_LOGIC;
            data_i 	: in  STD_LOGIC_VECTOR (7 downto 0);
@@ -26,7 +26,7 @@ begin
 				busy_o <= '0';
 			elsif(msg_ce_i = '1') then					
 				if state_s = IDLE then
-					state_s <= BD_SYNC;				-- after BTN1 enabled msg sending, wait for switched symbol rate in BD_SYNC
+					state_s <= BD_SYNC;	-- after BTN1 enabled msg sending, wait for switched symbol rate in BD_SYNC
 					data_o <= '1';
 					busy_o <= '0';
 				end if;
@@ -78,13 +78,13 @@ begin
 						busy_o <= '1';
 					when BIT_STOP_1 => 				
 						if(stop_i = '0') then		-- SW0 in log.0; 1 stop bit 
-							state_s <= IDLE;
-							data_o <= '1';
+						   state_s <= IDLE;
+						   data_o <= '1';
 						   busy_o <= '0';
 						else 
-							state_s <= BIT_STOP_2;	-- SW0 in log.1; 2 stop bits
-							data_o <= '1';
-							busy_o <= '1';
+						   state_s <= BIT_STOP_2;	-- SW0 in log.1; 2 stop bits
+						   data_o <= '1';
+						   busy_o <= '1';
 						end if;
 					when BIT_STOP_2 =>
 						state_s <= IDLE;
