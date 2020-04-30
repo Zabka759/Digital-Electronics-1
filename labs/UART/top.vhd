@@ -44,11 +44,11 @@ begin
 	
 	DEBOUNCE: entity work.Debounce
 		PORT MAP(
-			btn_i  	=> BTN1,
-			f_samp_i => sample_ce_i,
-			srst_n_i => BTN0,
-			clk_i	=> clk_i,
-			deb_o 	=>	s_deb);
+			btn_i  		=> BTN1,
+			f_samp_i 	=> sample_ce_i,
+			srst_n_i	=> BTN0,
+			clk_i		=> clk_i,
+			deb_o 		=> s_deb);
 		
 	SAMPLEBTN: entity work.clock_enable
 		GENERIC MAP (g_NPERIOD => x"03E8")		-- sampling period 1 ms (1000 periods)
